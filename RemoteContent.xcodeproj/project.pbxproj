@@ -309,6 +309,7 @@
 				62BBE7A31DC622A100C178AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
