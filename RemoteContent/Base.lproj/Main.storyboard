@@ -20,11 +20,11 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EMP-xA-0gi" id="bvs-Xt-HIS">
-                                    <frame key="frameInset" width="342" height="43"/>
+                                    <frame key="frameInset" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XFO-46-Q3S">
-                                            <frame key="frameInset" minX="15" width="325" height="43"/>
+                                            <frame key="frameInset" minX="15" width="325" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -40,9 +40,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="1Z6-wQ-G8t"/>
-                    <connections>
-                        <segue destination="dqT-6R-I1l" kind="show" identifier="showDetails" id="2II-Sa-RUI"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgl-vt-11o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +48,7 @@
         <!--Details View Controller-->
         <scene sceneID="B8T-EE-ZuW">
             <objects>
-                <viewController id="dqT-6R-I1l" customClass="DetailsViewController" customModule="RemoteContent" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Details" id="dqT-6R-I1l" customClass="DetailsViewController" customModule="RemoteContent" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6h2-M9-4bu"/>
                         <viewControllerLayoutGuide type="bottom" id="xcq-wX-uRR"/>

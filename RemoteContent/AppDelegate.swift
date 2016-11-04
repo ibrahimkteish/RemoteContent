@@ -19,6 +19,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+
+        if let root = window?.rootViewController as? UINavigationController {
+            
+            let urt_str = "http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1&Episode=" + String(url.absoluteString.characters.last!)
+            let resource = Resource<Episode>(url: URL(string:urt_str)!, parseJSON: { json in
+                guard let dictionary = json as? JSON else { return nil }
+                return Episode(fromJSON : dictionary)
+            })
+
+            let coordinator = DetailsCoordinator(loadingState: LoadingState<Episode>.network(resource))
+            let remoteContainer = RemoteContentContainerViewController<DetailsCoordinator>(coordinator:coordinator)
+            
+            root.pushViewController(remoteContainer, animated: true)
+            return true
+        }
+        return false
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

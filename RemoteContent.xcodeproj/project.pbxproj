@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6279263E1DC69058004DA59B /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6279263D1DC69058004DA59B /* Helpers.swift */; };
 		62BBE7931DC622A100C178AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BBE7921DC622A100C178AD /* AppDelegate.swift */; };
 		62BBE7981DC622A100C178AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BBE7961DC622A100C178AD /* Main.storyboard */; };
 		62BBE79A1DC622A100C178AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62BBE7991DC622A100C178AD /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6279263D1DC69058004DA59B /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		62BBE78F1DC622A100C178AD /* RemoteContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BBE7921DC622A100C178AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62BBE7971DC622A100C178AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				62BBE7A61DC62AEA00C178AD /* Models.swift */,
 				62BBE7A81DC63BDF00C178AD /* EpisodsTableViewController.swift */,
 				62BBE7AA1DC63F7400C178AD /* DetailsViewController.swift */,
+				6279263D1DC69058004DA59B /* Helpers.swift */,
 			);
 			path = RemoteContent;
 			sourceTree = "<group>";
@@ -105,6 +108,7 @@
 				TargetAttributes = {
 					62BBE78E1DC622A100C178AD = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 73ZB3356WU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -146,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62BBE7A51DC622E500C178AD /* APIAccess.swift in Sources */,
+				6279263E1DC69058004DA59B /* Helpers.swift in Sources */,
 				62BBE7931DC622A100C178AD /* AppDelegate.swift in Sources */,
 				62BBE7A71DC62AEA00C178AD /* Models.swift in Sources */,
 				62BBE7A91DC63BDF00C178AD /* EpisodsTableViewController.swift in Sources */,
@@ -270,6 +275,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 73ZB3356WU;
 				INFOPLIST_FILE = RemoteContent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xjen.RemoteContent;
@@ -282,6 +289,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 73ZB3356WU;
 				INFOPLIST_FILE = RemoteContent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xjen.RemoteContent;

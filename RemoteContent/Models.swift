@@ -9,6 +9,7 @@
 import Foundation
 
 let gameOfThronesURL = URL(string: "http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1")!
+let gameOfThronesEpisodeOneSeasonFiveURL = URL(string: "http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1&Episode=5")!
 
 protocol initableFromJSON {
     
@@ -34,6 +35,13 @@ extension Episode: initableFromJSON {
         imdbID = dictionary["imdbID"] as? String
         imdbRating = dictionary["imdbRating"] as? String
     }
+}
+
+extension Episode {
+    static let seasonOneEpisodeFive = Resource<Episode>(url: gameOfThronesEpisodeOneSeasonFiveURL, parseJSON: { json in
+        guard let dictionary = json as? JSON else { return nil }
+        return Episode(fromJSON : dictionary)
+    })
 }
 
 struct Series {
